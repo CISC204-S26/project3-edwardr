@@ -7,14 +7,15 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 241.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_olblw")
 
 [node name="Background" type="ColorRect" parent="." unique_id=671815484]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1395.0
+offset_bottom = 678.0
 color = Color(0.08, 0.09, 0.12, 1)
 
 [node name="TitleLabel" type="Label" parent="." unique_id=1080169083]
@@ -162,11 +163,11 @@ placeholder_text = "Type code, ex: 2102"
 
 [node name="InstructionLabel" type="Label" parent="." unique_id=1405580856]
 layout_mode = 0
-offset_left = 848.0
-offset_top = 400.0
-offset_right = 1095.0
-offset_bottom = 465.0
-text = "Use arrows to swap parts.
+offset_left = 709.0
+offset_top = 443.0
+offset_right = 1381.0
+offset_bottom = 518.0
+text = "(Didn't know how to make the arms and legs ina  simple way)Use arrows to swap parts.
 Use the slider to change head size.
 Press Enter after typing a code."
 horizontal_alignment = 1
