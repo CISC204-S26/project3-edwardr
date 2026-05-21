@@ -1,0 +1,181 @@
+[gd_scene format=3 uid="uid://c3u7yh0iresa3"]
+
+[ext_resource type="Script" uid="uid://dhnhfsslny15v" path="res://Project_4/character_creator.gd" id="1_olblw"]
+
+[node name="CharacterCreator" type="Control" unique_id=1565091943]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_olblw")
+
+[node name="Background" type="ColorRect" parent="." unique_id=671815484]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.08, 0.09, 0.12, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1080169083]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 25.0
+offset_right = 771.0
+offset_bottom = 60.0
+text = "Color Robot Combo Creator"
+horizontal_alignment = 1
+
+[node name="Head" type="ColorRect" parent="." unique_id=1718008031]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 110.0
+offset_right = 636.0
+offset_bottom = 230.0
+color = Color(1, 0, 0, 1)
+
+[node name="Body" type="ColorRect" parent="." unique_id=460449059]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 250.0
+offset_right = 656.0
+offset_bottom = 420.0
+color = Color(1, 1, 0, 1)
+
+[node name="Legs" type="ColorRect" parent="." unique_id=1096620498]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 440.0
+offset_right = 636.0
+offset_bottom = 590.0
+
+[node name="HeadLabel" type="Label" parent="." unique_id=227007822]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 145.0
+offset_right = 300.0
+offset_bottom = 178.0
+text = "Head"
+horizontal_alignment = 1
+
+[node name="BodyLabel" type="Label" parent="." unique_id=1429249249]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 316.0
+offset_right = 300.0
+offset_bottom = 349.0
+text = "Body"
+horizontal_alignment = 1
+
+[node name="LegsLabel" type="Label" parent="." unique_id=589437002]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 495.0
+offset_right = 300.0
+offset_bottom = 528.0
+text = "Legs"
+horizontal_alignment = 1
+
+[node name="HeadLeft" type="Button" parent="." unique_id=1476296389]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 145.0
+offset_right = 390.0
+offset_bottom = 185.0
+text = "<"
+
+[node name="HeadRight" type="Button" parent="." unique_id=1852335952]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 145.0
+offset_right = 820.0
+offset_bottom = 185.0
+text = ">"
+
+[node name="BodyLeft" type="Button" parent="." unique_id=1623381054]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 316.0
+offset_right = 390.0
+offset_bottom = 356.0
+text = "<"
+
+[node name="BodyRight" type="Button" parent="." unique_id=412018191]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 316.0
+offset_right = 820.0
+offset_bottom = 356.0
+text = ">"
+
+[node name="LegsLeft" type="Button" parent="." unique_id=1356352014]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 495.0
+offset_right = 390.0
+offset_bottom = 535.0
+text = "<"
+
+[node name="LegsRight" type="Button" parent="." unique_id=1661649503]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 495.0
+offset_right = 820.0
+offset_bottom = 535.0
+text = ">"
+
+[node name="HeadSizeLabel" type="Label" parent="." unique_id=2060382709]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 145.0
+offset_right = 1045.0
+offset_bottom = 175.0
+text = "Head Size"
+horizontal_alignment = 1
+
+[node name="HeadSizeSlider" type="HSlider" parent="." unique_id=669589671]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 185.0
+offset_right = 1045.0
+offset_bottom = 220.0
+min_value = 1.0
+max_value = 2.0
+value = 1.0
+
+[node name="SaveLabel" type="Label" parent="." unique_id=584967567]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 300.0
+offset_right = 1070.0
+offset_bottom = 335.0
+text = "Code: 0001"
+horizontal_alignment = 1
+
+[node name="StringInput" type="LineEdit" parent="." unique_id=172838838]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 345.0
+offset_right = 1070.0
+offset_bottom = 385.0
+placeholder_text = "Type code, ex: 2102"
+
+[node name="InstructionLabel" type="Label" parent="." unique_id=1405580856]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 400.0
+offset_right = 1095.0
+offset_bottom = 465.0
+text = "Use arrows to swap parts.
+Use the slider to change head size.
+Press Enter after typing a code."
+horizontal_alignment = 1
+
+[connection signal="pressed" from="HeadLeft" to="." method="_on_head_left_pressed"]
+[connection signal="pressed" from="HeadRight" to="." method="_on_head_right_pressed"]
+[connection signal="pressed" from="BodyLeft" to="." method="_on_body_left_pressed"]
+[connection signal="pressed" from="BodyRight" to="." method="_on_body_right_pressed"]
+[connection signal="pressed" from="LegsLeft" to="." method="_on_legs_left_pressed"]
+[connection signal="pressed" from="LegsRight" to="." method="_on_legs_right_pressed"]
+[connection signal="value_changed" from="HeadSizeSlider" to="." method="_on_head_size_slider_value_changed"]
+[connection signal="text_submitted" from="StringInput" to="." method="_on_string_input_text_submitted"]
